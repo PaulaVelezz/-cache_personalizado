@@ -1,3 +1,4 @@
+import Footer from "./components/Footer/Footer";
 import "./globals.css";
 import { Bebas_Neue, Space_Grotesk } from "next/font/google";
 
@@ -23,7 +24,11 @@ export default function RootLayout({ children }) {
       <body
         className={`antialiased ${bebas.variable} ${grotesk.variable}`}
       >
-        {children}
+        <main> 
+          {children}
+        </main>
+
+        <Footer />
       </body>
     </html>
   );
