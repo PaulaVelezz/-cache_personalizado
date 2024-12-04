@@ -1,9 +1,9 @@
-import ProjectCard from "./components/ProjectCard";
+import ProjectCard from "./components/ProjectCard/ProjectCard";
 import projectsData from "../app/data/projectsData";
 
 export default function Home() {
   return (
-    <section className="flex flex-col justify-around w-full lg:flex-row">
+    <section className="flex flex-col justify-around w-full h-full p-4 overflow-hidden lg:flex-row">
       <div className="flex flex-col mt-10 max-w-lg gap-8">
         <h1 className="text-5xl font-bold font-bebas text-stone-200 uppercase">⛏️⛏️ Arrancamos ⛏️⛏️</h1>
         <p className="text-lg font-grotesk"> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. </p>
@@ -16,7 +16,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-10 lg:mt-10">
+      <div className="flex flex-col items-center justify-center gap-10 lg:mt-10 p-4">
         {projectsData.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
